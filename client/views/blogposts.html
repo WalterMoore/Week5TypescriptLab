@@ -1,0 +1,22 @@
+<h1>I am blogposts.html</h1>
+
+<h3>Sample words, sample words</h3>
+
+        <div class="container">
+     
+
+            <div class="row">
+                
+                <div><h3>Enter Post:</h3></div>
+                <div class="blogbox">
+ 
+                    <input ng-model="post" class="post-text" type="text"/>
+
+                </div>
+               <button class="post-button" ng-click="submitPost()">Submit Post</button>
+            </div>
+            <div class="row posts">
+               <h4>{{post}}</h4>  
+            </div>
+            <div ng-repeat="post in posts"><h4> {{post.text}}. {{post.date | date:'medium'}} </h4></div>
+        </div>
